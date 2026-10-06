@@ -1,22 +1,22 @@
 === BENCHMARK HPC ===
 Workers: 1
-Pruebas: 0.558892, 0.512074, 0.504117
-Promedio: 0.525028 segundos
+Pruebas: 0.911903, 0.816937, 0.807664
+Promedio: 0.845501 segundos
 Speedup: 1.0000
 Eficiencia: 1.0000
 Eficiencia (%): 100.00%
 
 Workers: 2
-Pruebas: 0.282416, 0.282182, 0.315486
-Promedio: 0.293361 segundos
-Speedup: 1.7897
-Eficiencia: 0.8948
-Eficiencia (%): 89.48%
+Pruebas: 0.546705, 0.442829, 0.491267
+Promedio: 0.493600 segundos
+Speedup: 1.7129
+Eficiencia: 0.8565
+Eficiencia (%): 85.65%
 
 Workers: 4
-Pruebas: 0.218313, 0.336526, 0.218495
-Promedio: 0.257778 segundos
-Speedup: 2.0367
-Eficiencia: 0.5092
-Eficiencia (%): 50.92%
+Pruebas: 0.350501, 0.364705, 0.384740
+Promedio: 0.366649 segundos
+Speedup: 2.3060
+Eficiencia: 0.5765
+Eficiencia (%): 57.65%
 

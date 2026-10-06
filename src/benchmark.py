@@ -80,7 +80,7 @@ def main():
     with open("resultados/benchmark.txt", "w") as archivo:
         archivo.writelines(texto)
 
-    # Generar gráfica
+    # Gráfica de workers vs. tiempo
     tiempos = [promedios[w] for w in WORKERS]
 
     plt.figure(figsize=(8, 5))
@@ -93,8 +93,36 @@ def main():
     plt.savefig("resultados/workers_vs_tiempo.png")
     plt.close()
 
+    # Gráfica de workers vs. speedup
+    speedups = [tiempo_1 / promedios[w] for w in WORKERS]
+
+    plt.figure(figsize=(8, 5))
+    plt.plot(WORKERS, speedups, marker="o")
+    plt.xlabel("Número de workers")
+    plt.ylabel("Speedup")
+    plt.title("Workers vs. Speedup")
+    plt.xticks(WORKERS)
+    plt.grid(True)
+    plt.savefig("resultados/workers_vs_speedup.png")
+    plt.close()
+
+    # Gráfica de workers vs. eficiencia
+    eficiencias = [(tiempo_1 / promedios[w]) / w * 100 for w in WORKERS]
+
+    plt.figure(figsize=(8, 5))
+    plt.plot(WORKERS, eficiencias, marker="o")
+    plt.xlabel("Número de workers")
+    plt.ylabel("Eficiencia (%)")
+    plt.title("Workers vs. Eficiencia")
+    plt.xticks(WORKERS)
+    plt.grid(True)
+    plt.savefig("resultados/workers_vs_eficiencia.png")
+    plt.close()
+
     print("Resultados guardados en resultados/benchmark.txt")
     print("Gráfica guardada en resultados/workers_vs_tiempo.png")
+    print("Gráfica guardada en resultados/workers_vs_speedup.png")
+    print("Gráfica guardada en resultados/workers_vs_eficiencia.png")
 
 
 if __name__ == "__main__":
