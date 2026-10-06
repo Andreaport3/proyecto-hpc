@@ -1,7 +1,22 @@
 === BENCHMARK HPC ===
-Promedio secuencial: 0.294197 segundos
-Promedio paralelo:   0.200741 segundos
-Speedup:             1.4656
-Procesos:            8
-Eficiencia:         0.1832
-Eficiencia (%):      18.32%
+Workers: 1
+Pruebas: 0.911903, 0.816937, 0.807664
+Promedio: 0.845501 segundos
+Speedup: 1.0000
+Eficiencia: 1.0000
+Eficiencia (%): 100.00%
+
+Workers: 2
+Pruebas: 0.546705, 0.442829, 0.491267
+Promedio: 0.493600 segundos
+Speedup: 1.7129
+Eficiencia: 0.8565
+Eficiencia (%): 85.65%
+
+Workers: 4
+Pruebas: 0.350501, 0.364705, 0.384740
+Promedio: 0.366649 segundos
+Speedup: 2.3060
+Eficiencia: 0.5765
+Eficiencia (%): 57.65%
+
